@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.5"
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+# command to run tests
+script: 
+  - python -m unittest discover -p "test_*.py"
+  - coverage run --source=./ python -m unittest discover -p "test_*.py"
+after_success:
+- coveralls
