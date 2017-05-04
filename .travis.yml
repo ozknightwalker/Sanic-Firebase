@@ -8,6 +8,6 @@ install:
 # command to run tests
 script: 
   - python -m unittest discover -p "test_*.py"
-  - coverage run --source=./ python -m unittest discover -p "test_*.py"
+  - coverage run --source=./ -m unittest discover -p "test_*.py"
 after_success:
 - coveralls
