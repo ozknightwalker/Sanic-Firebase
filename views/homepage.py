@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from sanic.response import json, text
+from sanic.response import json
 from sanic.views import HTTPMethodView
 
 
