@@ -1,10 +1,11 @@
 from __future__ import unicode_literals
 
-from sanic.response import json
-from sanic.views import HTTPMethodView
+from core.views import TemplateView
 
 
-class HomepageView(HTTPMethodView):
+class HomepageView(TemplateView):
+    template_name = 'base.html'
 
-    async def get(self, request):
-        return json({'hello': 'world'})
+    def get_method(self, request):
+        context = {'title': 'Sanic'}
+        return context
