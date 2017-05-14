@@ -6,6 +6,6 @@ from core.views import TemplateView
 class HomepageView(TemplateView):
     template_name = 'base.html'
 
-    def get_method(self, request):
+    def get_context_data(self, request):
         context = {'title': 'Sanic'}
         return context
